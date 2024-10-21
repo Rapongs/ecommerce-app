@@ -8,7 +8,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 
-#[Title('Home - GadgetOne')]
+#[Title('Home - Medicare')]
 class HomePage extends Component
 {
     public function render()

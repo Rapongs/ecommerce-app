@@ -10,7 +10,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 
-#[Title('Product Detail - GadgetOne')]
+#[Title('Product Detail - Medicare')]
 class ProductDetailPage extends Component
 {   
 

@@ -46,7 +46,7 @@ class OrderResource extends Resource
                     Section::make('Order Information')->schema([
                         Select::make('user_id')
                             ->label('Customer')
-                            ->relationship('user', 'name')
+                            ->relationship('user', 'first_name')
                             ->searchable()
                             ->preload()
                             ->required(),
@@ -104,19 +104,19 @@ class OrderResource extends Resource
                         ToggleButtons::make('payment_status')
                             ->options([
                                 'pending' => 'Pending',
-                                'paid' => 'Paid',
+                                'success' => 'Success',
                                 'failed' => 'Failed'
                             ])
                             ->default('pending')
                             ->inline()
                             ->colors([
                                 'pending' => 'warning',
-                                'paid' => 'success',
+                                'success' => 'success',
                                 'failed' => 'danger'
                             ])
                             ->icons([
                                 'pending' => 'heroicon-m-clock',
-                                'paid' => 'heroicon-m-check-circle',
+                                'success' => 'heroicon-m-check-circle',
                                 'failed' => 'heroicon-m-x-circle'
                             ])
                             ->required(),
@@ -191,7 +191,7 @@ class OrderResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('user.name')
+                TextColumn::make('user.first_name')
                     ->label('Customer')
                     ->searchable()
                     ->sortable(),

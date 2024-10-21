@@ -7,7 +7,7 @@ use App\Livewire\Partials\Navbar;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-#[Title('Cart - GadgetOne')]
+#[Title('Cart - Medicare')]
 class CartsPage extends Component
 {
 
